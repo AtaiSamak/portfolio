@@ -1,0 +1,22 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: transparent;
+	padding: 25px 16px;
+	z-index: 3;
+}
+
+.title {
+	color: #fff;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.navbarWrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

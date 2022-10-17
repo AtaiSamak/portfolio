@@ -1,0 +1,41 @@
+.list {
+	display: flex;
+	list-style: none;
+}
+
+.listItem {
+	position: relative;
+	color: #fff;
+	cursor: pointer;
+	padding: 8px 18px;
+	text-transform: uppercase;
+}
+
+.listItem::before {
+	content: "";
+	background: #fff;
+	width: 0;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-left: 18px;
+	transition: width 0.4s ease-in-out;
+	animation-duration: 0.4s;
+	animation-name: hoverAnimation;
+}
+
+.listItem:hover::before,
+.listItem.active::before {
+	width: 35px;
+}
+
+@keyframes hoverAnimation {
+	from {
+		width: 0px;
+	}
+
+	to {
+		width: 35px;
+	}
+}

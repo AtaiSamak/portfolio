@@ -1,83 +1,83 @@
 .header {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .headerBackground {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	width: 100vw;
-	height: 100vh;
-	background: url("../../assets/header.webp") no-repeat center;
-	background-size: cover;
-	opacity: 0.5;
-	z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  z-index: 0;
 }
 
 .title {
-	color: #fff;
-	font-size: 72px;
-	font-weight: 600;
-	margin-bottom: 24px;
-	text-align: center;
+  color: #fff;
+  font-size: 72px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .headerWrapper {
-	position: relative;
-	z-index: 1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .typewriter {
-	font-size: 40px;
-	font-weight: 300;
-	color: #fff;
-	overflow: hidden; /* Ensures the content is not revealed until the animation */
-	border-right: 3px solid #fff; /* The typwriter cursor */
-	white-space: nowrap; /* Keeps the content on a single line */
-	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-	animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
-	max-width: min-content;
+  font-size: 40px;
+  font-weight: 300;
+  color: #fff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 3px solid #fff; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation:
+    typing 2.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+  max-width: min-content;
 }
 
 /* The typing effect */
 @keyframes typing {
-	from {
-		width: 0;
-	}
-	to {
-		width: 100%;
-	}
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-	from,
-	to {
-		border-color: transparent;
-	}
-	50% {
-		border-color: #fff;
-	}
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
 }
 
 @media screen and (max-width: 768px) {
-	.title {
-		font-size: 48px;
-	}
+  .title {
+    font-size: 48px;
+  }
 
-	.typewriter {
-		font-size: 24px;
-	}
+  .typewriter {
+    font-size: 24px;
+  }
 }

@@ -20,5 +20,6 @@
         "react"
     ],
     "rules": {
-    }
+    },
+    "ignorePatterns": ["craco.config.js"]
 }

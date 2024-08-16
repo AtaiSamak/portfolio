@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from './Navigation.module.scss'
 import NavigationButtons from './buttons/NavigationButtons'
 import NavigationHamburger from './hamburger/NavigationHamburger'
-import useMobileDetect from '../../hooks/useMobileDetect'
+import useMobileDetect from '@hooks/useMobileDetect'
 import classNames from 'classnames'
 
 const Navigation = () => {

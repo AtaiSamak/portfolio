@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../header'
-import Navigation from '../navigation'
+import Header from '@components/header'
+import Navigation from '@components/navigation'
 import './App.scss'
 
 const App = () => {

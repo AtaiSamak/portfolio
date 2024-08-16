@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
-import styles from './NavigationHamburger.module.scss'
+
 import classNames from 'classnames'
+
+import styles from './NavigationHamburger.module.scss'
 
 type NavigationHamburgerProps = {
   onChangeIsActive: () => void

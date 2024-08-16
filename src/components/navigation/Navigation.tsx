@@ -1,28 +1,26 @@
 import React, { useState } from "react";
-import styles from "../../styles/navigation/navigation.module.scss";
-import globalStyles from "../../styles/global.module.scss";
-import NavigationButtons from "./NavigationButtons";
-import NavigationHamburger from "./NavigationHamburger";
+import styles from "./Navigation.module.scss";
+import NavigationButtons from "./buttons/NavigationButtons";
+import NavigationHamburger from "./hamburger/NavigationHamburger";
 import useMobileDetect from "../../hooks/useMobileDetect";
+import classNames from "classnames";
 
 const Navigation = () => {
 	const isMobile = useMobileDetect();
-	const [active, setActive] = useState(false);
-
-	const handleChangeHamburgerState = () => setActive(!active);
+	const [isActive, setIsActive] = useState(false);
 
 	return (
-		<nav className={`${styles.navbar} ${active ? styles.active : ""}`}>
-			<div className={globalStyles.container}>
-				<div className={styles.navbarWrapper}>
+		<nav className={classNames(styles.navbar,  isActive && styles.navbarActive)}>
+			<div className={"container"}>
+				<div className={styles.content}>
 					<h1 className={styles.title}>AtaiSamak</h1>
 					{!isMobile && <NavigationButtons />}
 					<NavigationHamburger
-						onChangeHamburgerState={handleChangeHamburgerState}
-						active={active}
+						onChangeIsActive={() => setIsActive(!isActive)}
+						isActive={isActive}
 					/>
 				</div>
-				<div className={styles.menuItemsWrapper}>
+				<div className={styles.items}>
 					<NavigationButtons />
 				</div>
 			</div>

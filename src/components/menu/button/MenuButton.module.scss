@@ -1,0 +1,112 @@
+@import '@styles/_variables';
+
+.button {
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+
+  &Top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .buttonText {
+      bottom: 80%;
+      left: 90%;
+    }
+
+    .background {
+      background-color: $color-orange;
+    }
+  }
+
+  &Right {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+
+    .buttonText {
+      top: 80%;
+      left: 90%;
+    }
+
+    .background {
+      background-color: $color-blue;
+    }
+  }
+
+  &Bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    .buttonText {
+      top: 80%;
+      right: 90%;
+    }
+
+    .background {
+      background-color: $color-black;
+    }
+  }
+
+  &Left {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    .buttonText {
+      bottom: 80%;
+      right: 90%;
+    }
+    .background {
+      background-color: $color-green;
+    }
+  }
+
+  .buttonText {
+    position: absolute;
+
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+  }
+
+  .border,
+  .background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .border {
+    border: 10px solid $color-gray;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: transform 0.2s ease-in-out;
+    background: $color-white;
+  }
+
+  .background {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover {
+    .background {
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    .border {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .buttonText {
+      opacity: 1;
+    }
+  }
+}

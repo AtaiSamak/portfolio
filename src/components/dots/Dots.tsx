@@ -14,24 +14,24 @@ const Dots = () => {
 
   const dotsList = useMemo(() => DotsHelpers.getDots(), [windowSize])
 
-  useEffect(() => {
-    const windowWidth = WindowHelpers.getWidth()
-    const windowHeight = WindowHelpers.getHeight()
-
-    const parallax = (event: MouseEvent) => {
-      const dots = ref.current?.querySelectorAll(`.${styles.dot}`) as NodeListOf<HTMLDivElement>
-
-      dots.forEach((item, i) => {
-        const pageX = event.clientX - windowWidth / 2
-        const pageY = event.clientY - windowHeight / 2
-        item.style.transform =
-          'translateX(-' + (50 + pageX / 50) + '%) translateY(-' + (50 + pageY / 50) + '%)'
-      })
-    }
-
-    document.addEventListener('mousemove', parallax)
-    return () => document.removeEventListener('mousemove', parallax)
-  }, [dotsList])
+  // useEffect(() => {
+  //   const windowWidth = WindowHelpers.getWidth()
+  //   const windowHeight = WindowHelpers.getHeight()
+  //
+  //   const parallax = (event: MouseEvent) => {
+  //     const dots = ref.current?.querySelectorAll(`.${styles.dot}`) as NodeListOf<HTMLDivElement>
+  //
+  //     dots.forEach((item, i) => {
+  //       const pageX = event.clientX - windowWidth / 2
+  //       const pageY = event.clientY - windowHeight / 2
+  //       item.style.transform =
+  //         'translateX(-' + (50 + pageX / 50) + '%) translateY(-' + (50 + pageY / 50) + '%)'
+  //     })
+  //   }
+  //
+  //   document.addEventListener('mousemove', parallax)
+  //   return () => document.removeEventListener('mousemove', parallax)
+  // }, [dotsList])
 
   return (
     <div ref={ref}>

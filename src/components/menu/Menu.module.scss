@@ -1,0 +1,40 @@
+@import '@styles/_variables';
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 10px solid $color-gray;
+  background-color: $color-white;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-wrap: nowrap;
+  text-align: center;
+  font-size: $font-size-xl;
+  font-weight: 600;
+
+  span {
+    display: block;
+    font-size: $font-size-lg;
+    font-weight: 400;
+  }
+}

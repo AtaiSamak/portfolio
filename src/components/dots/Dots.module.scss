@@ -1,0 +1,8 @@
+@import '@styles/_variables';
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background-color: $color-gray;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+}

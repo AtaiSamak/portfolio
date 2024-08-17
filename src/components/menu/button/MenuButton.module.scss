@@ -88,18 +88,18 @@
   .border {
     border: 10px solid $color-gray;
     transform: translate(-50%, -50%) scale(0.5);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     background: $color-white;
   }
 
   .background {
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
 
   &:hover {
     .background {
-      transform: translate(-50%, -50%) scale(0.5);
+      transform: translate(-50%, -50%) scale(0.6);
     }
     .border {
       transform: translate(-50%, -50%) scale(1);

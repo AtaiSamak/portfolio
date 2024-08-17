@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Dots from '@components/dots/Dots'
+import Contacts from '@components/contacts/Contacts'
 import Menu from '@components/menu/Menu'
 import Resume from '@components/resume/Resume'
 
@@ -10,11 +10,9 @@ import './App.scss'
 const App = () => {
   return (
     <div className={styles.app}>
-      <div className={styles.background}>
-        <Dots />
-      </div>
       <Resume />
       <Menu />
+      <Contacts />
     </div>
   )
 }

@@ -1,0 +1,20 @@
+.container {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+
+.icon {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  opacity: 0.9;
+
+  & + & {
+    margin-left: 15px;
+  }
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}

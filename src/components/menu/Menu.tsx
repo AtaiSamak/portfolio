@@ -2,13 +2,17 @@ import React from 'react'
 
 import MenuButton from '@components/menu/button/MenuButton'
 
+import useParallax from '@hooks/useParallax'
+
 import { ReactComponent as DashedCircle } from '@images/dashed-circle.svg'
 
 import styles from './Menu.module.scss'
 
 const Menu = () => {
+  const ref = useParallax({ intensity: 800 })
+
   return (
-    <div className={styles.menu}>
+    <div className={styles.menu} ref={ref}>
       <div className={styles.content}>
         <DashedCircle width={450} height={450} />
         <div className={styles.text}>

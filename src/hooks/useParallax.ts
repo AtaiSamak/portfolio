@@ -6,8 +6,8 @@ const useParallax = (
   {
     intensity = 50,
     elementsSelector = null,
-  }: { intensity?: number; elementsSelector?: string | null },
-  deps: DependencyList = [],
+  }: { intensity?: number; elementsSelector?: string | null } | undefined = {},
+  deps: DependencyList | undefined = [],
 ) => {
   const ref = useRef<HTMLDivElement>(null)
 

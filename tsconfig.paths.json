@@ -4,6 +4,7 @@
     "paths": {
       "@app/*": ["./app/*"],
       "@images/*": ["./assets/images/*"],
+      "@icons/*": ["./assets/icons/*"],
       "@styles/*": ["./assets/styles/*"],
       "@hooks/*": ["./hooks/*"],
       "@helpers/*": ["./helpers/*"],

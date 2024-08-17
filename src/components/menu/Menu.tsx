@@ -20,10 +20,12 @@ const Menu = () => {
           <span>Frontend Developer</span>
         </div>
       </div>
-      <MenuButton position={'top'}>WORK</MenuButton>
-      <MenuButton position={'right'}>ABOUT</MenuButton>
-      <MenuButton position={'bottom'}>EDUCATION</MenuButton>
-      <MenuButton position={'left'}>SKILLS</MenuButton>
+      <div className={styles.buttons}>
+        <MenuButton position={'top'}>WORK</MenuButton>
+        <MenuButton position={'right'}>ABOUT</MenuButton>
+        <MenuButton position={'bottom'}>EDUCATION</MenuButton>
+        <MenuButton position={'left'}>SKILLS</MenuButton>
+      </div>
     </div>
   )
 }

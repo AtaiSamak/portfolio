@@ -1,26 +1,25 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+
+import educationConfig from '@components/education/Education.config'
+
+import styles from './Education.module.scss'
 
 const Education = () => {
+  const { t } = useTranslation()
+
   return (
-    <div>
-      <b>2024</b>
-      <br />
-      <b>Information Systems and Technologies</b>
-      <p>
-        Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-        ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-        lorem ipsum lorem ipsum
-      </p>
-      <br />
-      <b>2022</b>
-      <br />
-      <b>School 21 by Sberbank</b>
-      <p>
-        Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-        ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-        lorem ipsum lorem ipsum
-      </p>
-    </div>
+    <>
+      {educationConfig.map((item, index) => (
+        <div key={index} className={styles.container}>
+          <div className={styles.date}>{item.date.getFullYear()}</div>
+          <div className={styles.name}>
+            {t(item.field)}, {t(item.name)}
+          </div>
+          <p className={styles.description}>{t(item.description)}</p>
+        </div>
+      ))}
+    </>
   )
 }
 

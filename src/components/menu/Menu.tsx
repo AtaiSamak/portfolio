@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import classNames from 'classnames'
 
@@ -11,22 +12,22 @@ import styles from './Menu.module.scss'
 
 const SECTIONS = [
   {
-    label: 'ABOUT',
+    label: 'menu.about',
     section: NavigationTypes.Section.ABOUT,
     position: NavigationTypes.Location.TOP,
   },
   {
-    label: 'EDUCATION',
+    label: 'menu.education',
     section: NavigationTypes.Section.EDUCATION,
     position: NavigationTypes.Location.RIGHT,
   },
   {
-    label: 'SKILLS',
+    label: 'menu.skills',
     section: NavigationTypes.Section.SKILLS,
     position: NavigationTypes.Location.BOTTOM,
   },
   {
-    label: 'WORK',
+    label: 'menu.work',
     section: NavigationTypes.Section.WORK,
     position: NavigationTypes.Location.LEFT,
   },
@@ -38,6 +39,8 @@ type MenuProps = {
 }
 
 const Menu: FC<MenuProps> = ({ section, onChange }) => {
+  const { t } = useTranslation()
+
   const buttonsRef = useRef<HTMLDivElement>(null)
   const previousSection = useRef(section)
   const rotation = useRef(0)
@@ -92,8 +95,8 @@ const Menu: FC<MenuProps> = ({ section, onChange }) => {
       <div className={styles.content}>
         <DashedCircle width={450} height={450} />
         <div className={styles.text}>
-          ATAI SAMAKOV
-          <span>Frontend Developer</span>
+          {t('author.fullName')}
+          <span>{t('author.specialization')}</span>
         </div>
       </div>
       <div ref={buttonsRef} className={styles.buttons}>
@@ -104,7 +107,7 @@ const Menu: FC<MenuProps> = ({ section, onChange }) => {
             position={item.position}
             onClick={() => onChange(item.section)}
           >
-            {item.label}
+            {t(item.label)}
           </MenuButton>
         ))}
       </div>

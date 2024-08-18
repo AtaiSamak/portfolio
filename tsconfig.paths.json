@@ -6,6 +6,7 @@
       "@images/*": ["./assets/images/*"],
       "@icons/*": ["./assets/icons/*"],
       "@styles/*": ["./assets/styles/*"],
+      "@translations/*": ["./assets/i18n/*"],
       "@hooks/*": ["./hooks/*"],
       "@helpers/*": ["./helpers/*"],
       "@customTypes/*": ["./types/*"],

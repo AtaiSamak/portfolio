@@ -1,0 +1,14 @@
+.container {
+  & + & {
+    margin-top: 25px;
+  }
+}
+
+.name,
+.date {
+  font-weight: 500;
+}
+
+.description {
+  margin-top: 10px;
+}

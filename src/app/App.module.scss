@@ -1,3 +1,5 @@
+@import '@styles/_variables';
+
 .app {
   position: fixed;
   top: 0;
@@ -17,4 +19,18 @@
 
   max-width: 1440px;
   width: 100%;
+}
+
+.section {
+  position: fixed;
+  top: 150%;
+  right: 0;
+  left: 500px; // TODO get menu width + 200px
+  transform: translateY(-50%);
+
+  transition: top 0.2s ease-in-out;
+
+  &Active {
+    top: 50%;
+  }
 }

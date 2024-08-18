@@ -1,6 +1,10 @@
 import React from 'react'
 
+import classNames from 'classnames'
+
+import About from '@components/about/About'
 import Contacts from '@components/contacts/Contacts'
+import Education from '@components/education/Education'
 import Menu from '@components/menu/Menu'
 import Resume from '@components/resume/Resume'
 
@@ -16,6 +20,10 @@ const App = () => {
       <Resume />
       <div className={styles.container}>
         <Menu section={activeSection} onChange={setActiveSection} />
+        <div className={classNames(styles.section, activeSection && styles.sectionActive)}>
+          {activeSection === NavigationTypes.Section.ABOUT && <About />}
+          {activeSection === NavigationTypes.Section.EDUCATION && <Education />}
+        </div>
       </div>
       <Contacts />
     </div>

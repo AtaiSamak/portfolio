@@ -7,3 +7,14 @@
 
   overflow: hidden;
 }
+
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+
+  max-width: 1440px;
+  width: 100%;
+}

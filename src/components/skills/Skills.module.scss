@@ -1,0 +1,5 @@
+.skillBar {
+  & + & {
+    margin-top: 20px;
+  }
+}

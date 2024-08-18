@@ -7,6 +7,7 @@ import Contacts from '@components/contacts/Contacts'
 import Education from '@components/education/Education'
 import Menu from '@components/menu/Menu'
 import Resume from '@components/resume/Resume'
+import Skills from '@components/skills/Skills'
 
 import NavigationTypes from '../types/navigation'
 import styles from './App.module.scss'
@@ -23,6 +24,7 @@ const App = () => {
         <div className={classNames(styles.section, activeSection && styles.sectionActive)}>
           {activeSection === NavigationTypes.Section.ABOUT && <About />}
           {activeSection === NavigationTypes.Section.EDUCATION && <Education />}
+          {activeSection === NavigationTypes.Section.SKILLS && <Skills />}
         </div>
       </div>
       <Contacts />

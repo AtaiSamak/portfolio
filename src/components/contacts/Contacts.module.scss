@@ -2,12 +2,16 @@
   position: absolute;
   left: 50px;
   bottom: 50px;
+
+  display: flex;
 }
 
-.icon {
+.link {
+  width: 46px;
+  height: 46px;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
   opacity: 0.9;
+  transition: transform 0.2s ease-in-out;
 
   & + & {
     margin-left: 15px;

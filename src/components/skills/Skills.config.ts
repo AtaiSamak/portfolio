@@ -1,4 +1,9 @@
-const skillsConfig = [
+const skillBars = [
+  {
+    name: 'HTML/CSS(SCSS)',
+    value: 100,
+    color: '#27ae60',
+  },
   {
     name: 'JavaScript',
     value: 100,
@@ -8,11 +13,6 @@ const skillsConfig = [
     name: 'React',
     value: 100,
     color: '#1199ff',
-  },
-  {
-    name: 'HTML/CSS(SCSS)',
-    value: 100,
-    color: '#27ae60',
   },
   {
     name: 'TypeScript',
@@ -30,5 +30,12 @@ const skillsConfig = [
     color: '#9b59b6',
   },
 ]
+
+const skillBoxes = ['Git', 'Rest API', 'Webpack', 'npm', 'Firebase', 'Atlassian Jira', 'Agile']
+
+const skillsConfig = {
+  bars: skillBars,
+  boxes: skillBoxes,
+}
 
 export default skillsConfig

@@ -1,3 +1,5 @@
+@import '@styles/_variables';
+
 .container {
   & + & {
     margin-top: 25px;
@@ -7,6 +9,10 @@
 .name,
 .date {
   font-weight: 500;
+}
+
+.date {
+  font-size: $font-size-sm;
 }
 
 .description {

@@ -1,5 +1,11 @@
 .skillBar {
   & + & {
-    margin-top: 20px;
+    margin-top: 25px;
   }
+}
+
+.skillBoxes {
+  display: flex;
+  margin-top: 50px;
+  gap: 15px;
 }

@@ -10,6 +10,8 @@
   "menu.skills": "Skills",
 
   "label.resume": "Resume",
+  "label.present": "PRESENT",
+  "label.project": "Project",
 
   "about.description": " <0>Hi, I’m Atai, a passionate Frontend Developer with a keen eye for detail and a strong foundation in JavaScript, React, and modern web technologies.</0><0>With a deep understanding of HTML, CSS, JavaScript (ES6+), TypeScript, and frameworks like React and Redux, I specialize in building intuitive and responsive web applications.</0><0>My goal is to continue growing as a developer, eventually stepping into a senior frontend role where I can lead projects and mentor others.</0><0>I hold a bachelor degree in Information Systems and Technologies from KNITU-KAI and have completed advanced programming courses at 'School 21' by Sberbank.</0><0>I am deeply committed to writing clean, maintainable code and believe in the importance of continuous learning. Books like 'Clean Code' by Robert Martin and 'Effective TypeScript' by Dan Vanderkam have greatly influenced my development philosophy.</0><0>Feel free to reach out if you’d like to collaborate on a project, discuss job opportunities, or just chat about the latest in frontend development!</0>",
 
@@ -19,5 +21,21 @@
 
   "education.school21.name": "School 21",
   "education.school21.field": "Programming courses",
-  "education.school21.description": "I studied C/C++ programming languages. I developed small projects, gaining new knowledge about programming fundamentals (threads, semaphores, mutexes, sockets, etc.). In this course, I gained real practical programming skills."
+  "education.school21.description": "I studied C/C++ programming languages. I developed small projects, gaining new knowledge about programming fundamentals (threads, semaphores, mutexes, sockets, etc.). In this course, I gained real practical programming skills.",
+
+  "work.myack.name": "Myack",
+  "work.myack.location": "New York United States",
+  "work.myack.ziphy.name": "Ziphy",
+  "work.myack.ziphy.description": "<0>1. Developed from scratch a secure, multi-page online form with robust data validation and PDF generation capabilities;</0><0>2. Implemented a user-friendly appointment booking system, improving patient access and scheduling efficiency.</0>",
+  "work.myack.labq.name": "LabQ",
+  "work.myack.labq.description": "<0>1. Designed and built interactive graphs for visualizing patient medical data;</0><0>2. Created an innovative, filterable human body map to display patients' diseases and corresponding medical indicators, providing a powerful tool for diagnosis and treatment discussions.</0>",
+
+  "work.welbex.name": "Welbex",
+  "work.welbex.location": "Moscow Russia",
+  "work.welbex.amocrm.name": "AmoCRM",
+  "work.welbex.amocrm.description": "<0>1. Developed and maintained custom integrations for the AmoCRM platform using JavaScript, React, Redux Toolkit, Axios, HTML, and CSS.</0><0>2. Successfully migrated legacy JavaScript applications to React improving maintainability and performance;</0><0>3. Collaborated with designers, back-end engineers, QA testers, and project managers throughout the full software development lifecycle, from ideation to deployment.</0>",
+
+  "work.proxyone.name": "Proxyone",
+  "work.proxyone.location": "Poznan Poland",
+  "work.proxyone.description": "<0>1. Developed responsive and SEO-optimized e-commerce websites, landing pages, and admin panels using HTML, CSS, and JavaScript;</0><0>2.Implemented performance optimizations to enhance page load speed.</0>"
 }

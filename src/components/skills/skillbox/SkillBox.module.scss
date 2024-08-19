@@ -1,0 +1,9 @@
+@import '@styles/_variables';
+
+.container {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: $color-gray;
+  opacity: 0.9;
+  width: fit-content;
+}

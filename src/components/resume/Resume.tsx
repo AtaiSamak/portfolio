@@ -7,9 +7,10 @@ import styles from './Resume.module.scss'
 
 const Resume = () => {
   const { t } = useTranslation()
+
   return (
     <div className={styles.resume}>
-      {t('label.resume')} <Download width={32} height={32} />
+      {t('label.resume')} <Download className={styles.download} />
     </div>
   )
 }

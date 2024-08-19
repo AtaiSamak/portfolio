@@ -19,6 +19,26 @@
   &Active {
     left: 0;
   }
+
+  @media (max-width: 1440px) {
+    // 25% smaller
+    width: 450px;
+    height: 450px;
+
+    .dashedCircle {
+      width: 337.5px;
+      height: 337.5px;
+    }
+
+    .buttons {
+      border: 7.5px solid $color-gray;
+    }
+  }
+}
+
+.dashedCircle {
+  width: 450px;
+  height: 450px;
 }
 
 .content {

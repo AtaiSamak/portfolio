@@ -122,7 +122,7 @@ const Menu: FC<MenuProps> = ({ section, onChange }) => {
       })}
     >
       <div className={styles.content}>
-        <DashedCircle width={450} height={450} />
+        <DashedCircle className={styles.dashedCircle} />
         <div className={styles.text}>
           {t('author.fullName')}
           <span>{t('author.specialization')}</span>

@@ -24,13 +24,17 @@
 .section {
   position: fixed;
   top: 150%;
-  right: 0;
-  left: 500px; // TODO get menu width + 200px
-  transform: translateY(-50%);
+  left: 450px;
+  right: 150px;
 
+  transform: translateY(-50%);
   transition: top 0.2s ease-in-out;
 
   &Active {
     top: 50%;
+  }
+
+  @media (max-width: 1440px) {
+    left: 350px;
   }
 }

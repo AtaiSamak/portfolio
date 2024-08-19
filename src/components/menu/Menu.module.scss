@@ -6,6 +6,7 @@
   left: 50%;
   z-index: 2;
   transform: translate(-50%, -50%);
+  pointer-events: auto;
 
   width: 600px;
   height: 600px;

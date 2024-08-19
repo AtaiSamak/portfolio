@@ -8,6 +8,7 @@
   bottom: 0;
 
   overflow: hidden;
+  pointer-events: none;
 }
 
 .container {
@@ -22,13 +23,11 @@
 }
 
 .section {
-  position: absolute;
-  top: 0;
-
+  margin: 0 auto;
   max-width: 1440px;
   width: calc(100% - 50px);
-  margin: 0 auto;
-  padding: 75px 125px 75px 475px;
+  padding: 75px 175px 75px 475px;
+  pointer-events: auto;
 
   @media (max-width: 1440px) {
     padding-left: 375px;

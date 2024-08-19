@@ -22,19 +22,15 @@
 }
 
 .section {
-  position: fixed;
-  top: 150%;
-  left: 450px;
-  right: 150px;
+  position: absolute;
+  top: 0;
 
-  transform: translateY(-50%);
-  transition: top 0.2s ease-in-out;
-
-  &Active {
-    top: 50%;
-  }
+  max-width: 1440px;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  padding: 75px 125px 75px 475px;
 
   @media (max-width: 1440px) {
-    left: 350px;
+    padding-left: 375px;
   }
 }

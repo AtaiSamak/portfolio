@@ -18,19 +18,21 @@ const App = () => {
   const [activeSection, setActiveSection] = React.useState<NavigationTypes.Section | null>(null)
 
   return (
-    <div className={styles.app}>
-      <Resume />
-      <div className={styles.container}>
-        <Menu section={activeSection} onChange={setActiveSection} />
-        <div className={classNames(styles.section, activeSection && styles.sectionActive)}>
-          {activeSection === NavigationTypes.Section.ABOUT && <About />}
-          {activeSection === NavigationTypes.Section.EDUCATION && <Education />}
-          {activeSection === NavigationTypes.Section.SKILLS && <Skills />}
-          {activeSection === NavigationTypes.Section.WORK && <Work />}
+    <>
+      <div className={styles.app}>
+        <Resume />
+        <div className={styles.container}>
+          <Menu section={activeSection} onChange={setActiveSection} />
         </div>
+        <Contacts />
       </div>
-      <Contacts />
-    </div>
+      <div className={classNames(styles.section, activeSection && styles.sectionActive)}>
+        {activeSection === NavigationTypes.Section.ABOUT && <About />}
+        {activeSection === NavigationTypes.Section.EDUCATION && <Education />}
+        {activeSection === NavigationTypes.Section.SKILLS && <Skills />}
+        {activeSection === NavigationTypes.Section.WORK && <Work />}
+      </div>
+    </>
   )
 }
 

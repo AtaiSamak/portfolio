@@ -27,12 +27,10 @@ const App = () => {
         <Contacts />
       </div>
       <div className={classNames(styles.section, activeSection && styles.sectionActive)}>
-        <div className={styles.sectionBox}>
-          {activeSection === NavigationTypes.Section.ABOUT && <About />}
-          {activeSection === NavigationTypes.Section.EDUCATION && <Education />}
-          {activeSection === NavigationTypes.Section.SKILLS && <Skills />}
-          {activeSection === NavigationTypes.Section.WORK && <Work />}
-        </div>
+        {activeSection === NavigationTypes.Section.ABOUT && <About />}
+        {activeSection === NavigationTypes.Section.EDUCATION && <Education />}
+        {activeSection === NavigationTypes.Section.SKILLS && <Skills />}
+        {activeSection === NavigationTypes.Section.WORK && <Work />}
       </div>
     </>
   )

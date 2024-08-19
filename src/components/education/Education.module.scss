@@ -9,11 +9,15 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .name,
 .date {
   font-weight: 500;
+  span {
+    text-wrap: nowrap;
+  }
 }
 
 .date {

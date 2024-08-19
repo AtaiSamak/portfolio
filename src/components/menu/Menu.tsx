@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from 'react'
+import React, { FC, useCallback, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import classNames from 'classnames'
@@ -45,12 +45,7 @@ const Menu: FC<MenuProps> = ({ section, onChange }) => {
   const previousSection = useRef(section)
   const rotation = useRef(0)
 
-  useEffect(() => {
-    if (!buttonsRef.current) {
-      return
-    } else if (!section) {
-      rotation.current = 0
-    }
+  const calculateRotation = useCallback((section: NavigationTypes.Section) => {
     if (previousSection.current === null) {
       switch (section) {
         case NavigationTypes.Section.EDUCATION:
@@ -81,9 +76,43 @@ const Menu: FC<MenuProps> = ({ section, onChange }) => {
             : rotation.current - 90 * Math.abs(prev - curr)
       }
     }
-    buttonsRef.current.style.transform = `rotate(${rotation.current}deg)`
-    previousSection.current = section
-  }, [section])
+    return rotation.current
+  }, [])
+
+  const rotateMenu = useCallback((menuRotation: number) => {
+    if (buttonsRef.current) {
+      buttonsRef.current.style.transform = `rotate(${menuRotation}deg)`
+    }
+  }, [])
+
+  const rotateButtons = useCallback((menuRotation: number) => {
+    if (!buttonsRef.current) return
+
+    const [topButton, rightButton, bottomButton, leftButton] = [
+      buttonsRef.current.querySelector(`#menu-button-${NavigationTypes.Location.TOP}`),
+      buttonsRef.current.querySelector(`#menu-button-${NavigationTypes.Location.RIGHT}`),
+      buttonsRef.current.querySelector(`#menu-button-${NavigationTypes.Location.BOTTOM}`),
+      buttonsRef.current.querySelector(`#menu-button-${NavigationTypes.Location.LEFT}`),
+    ] as HTMLDivElement[]
+
+    topButton.style.transform = `translate(-50%, -50%) rotate(${menuRotation * -1}deg)`
+    rightButton.style.transform = `translate(50%, -50%) rotate(${menuRotation * -1}deg)`
+    bottomButton.style.transform = `translate(-50%, 50%) rotate(${menuRotation * -1}deg)`
+    leftButton.style.transform = `translate(-50%, -50%) rotate(${menuRotation * -1}deg)`
+  }, [])
+
+  useEffect(() => {
+    if (!buttonsRef.current) {
+      return
+    } else if (section) {
+      calculateRotation(section)
+      rotateMenu(rotation.current)
+      rotateButtons(rotation.current)
+      previousSection.current = section
+    } else {
+      rotation.current = 0
+    }
+  }, [section, calculateRotation, rotateMenu, rotateButtons])
 
   return (
     <div
@@ -103,6 +132,7 @@ const Menu: FC<MenuProps> = ({ section, onChange }) => {
         {SECTIONS.map((item) => (
           <MenuButton
             key={item.section}
+            id={`menu-button-${item.position}`}
             isActive={item.section === section}
             position={item.position}
             onClick={() => onChange(item.section)}

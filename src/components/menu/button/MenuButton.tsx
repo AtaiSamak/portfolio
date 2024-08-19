@@ -6,15 +6,17 @@ import classNames from 'classnames'
 import styles from './MenuButton.module.scss'
 
 type MenuButtonProps = {
+  id: string
   isActive: boolean
   position: Navigation.Location
   children: React.ReactNode
   onClick: () => void
 }
 
-const MenuButton: FC<MenuButtonProps> = ({ isActive, position, children, onClick }) => {
+const MenuButton: FC<MenuButtonProps> = ({ id, isActive, position, children, onClick }) => {
   return (
     <div
+      id={id}
       onClick={onClick}
       className={classNames(styles.button, {
         [styles.buttonTop]: position === 'top',
@@ -24,8 +26,8 @@ const MenuButton: FC<MenuButtonProps> = ({ isActive, position, children, onClick
         [styles.buttonActive]: isActive,
       })}
     >
-      <div className={styles.border}></div>
-      <div className={styles.background}></div>
+      <div className={styles.border} />
+      <div className={styles.background} />
       <div className={styles.buttonText}>{children}</div>
     </div>
   )

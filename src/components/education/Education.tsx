@@ -14,7 +14,7 @@ const Education = () => {
         <div key={index} className={styles.container}>
           <div className={styles.header}>
             <div className={styles.name}>
-              <span>{t(item.field)}</span>, <span>{t(item.name)}</span>
+              {t(item.field)}, {t(item.name)}
             </div>
             <div className={styles.date}>{item.date.getFullYear()}</div>
           </div>

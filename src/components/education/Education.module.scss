@@ -10,14 +10,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .name,
 .date {
   font-weight: 500;
-  span {
-    text-wrap: nowrap;
-  }
 }
 
 .date {

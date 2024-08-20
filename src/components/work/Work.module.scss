@@ -10,6 +10,10 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.25em;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 }
 
 .date {

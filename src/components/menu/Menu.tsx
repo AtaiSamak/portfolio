@@ -106,12 +106,12 @@ const Menu: FC<MenuProps> = ({ section, onChange }) => {
       return
     } else if (section) {
       calculateRotation(section)
-      rotateMenu(rotation.current)
-      rotateButtons(rotation.current)
-      previousSection.current = section
     } else {
       rotation.current = 0
     }
+    rotateMenu(rotation.current)
+    rotateButtons(rotation.current)
+    previousSection.current = section
   }, [section, calculateRotation, rotateMenu, rotateButtons])
 
   return (

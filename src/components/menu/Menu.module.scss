@@ -35,6 +35,21 @@
       border: 7.5px solid $color-gray;
     }
   }
+
+  @media (max-width: 1024px) {
+    // 40% smaller
+    width: 360px;
+    height: 360px;
+
+    .dashedCircle {
+      width: 270px;
+      height: 270px;
+    }
+
+    .buttons {
+      border: 6px solid $color-gray;
+    }
+  }
 }
 
 .dashedCircle {

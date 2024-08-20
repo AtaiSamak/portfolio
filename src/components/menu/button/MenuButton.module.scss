@@ -104,4 +104,14 @@
       border: 7.5px solid $color-gray;
     }
   }
+
+  @media (max-width: 1024px) {
+    // 40% smaller
+    width: 60px;
+    height: 60px;
+
+    .border {
+      border: 6px solid $color-gray;
+    }
+  }
 }

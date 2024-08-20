@@ -1,0 +1,40 @@
+@import '@styles/_variables';
+
+.settings {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  pointer-events: auto;
+
+  display: flex;
+
+  .lang,
+  .theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    cursor: pointer;
+    opacity: 0.9;
+    transition:
+      transform 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.25);
+    }
+
+    svg {
+      height: 50%;
+      width: 50%;
+    }
+  }
+
+  .lang {
+    margin-left: 0.25em;
+  }
+}

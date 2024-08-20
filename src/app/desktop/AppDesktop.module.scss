@@ -1,4 +1,4 @@
-@import '@styles/_variables';
+@import '@styles/variables';
 
 .app {
   position: fixed;
@@ -84,4 +84,23 @@
     padding-left: 325px;
     padding-right: 125px;
   }
+}
+
+.resume {
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  z-index: 2;
+}
+
+.settings {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.contacts {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
 }

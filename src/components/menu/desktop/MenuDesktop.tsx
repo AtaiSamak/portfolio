@@ -1,44 +1,24 @@
 import React, { FC, useCallback, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import NavigationTypes from '@customTypes/navigation'
 import classNames from 'classnames'
 
+import menuConfig from '@components/menu/Menu.config'
 import MenuButton from '@components/menu/button/MenuButton'
 
 import { ReactComponent as DashedCircle } from '@images/dashed-circle.svg'
 
-import NavigationTypes from '../../types/navigation'
-import styles from './Menu.module.scss'
+import styles from './MenuDesktop.module.scss'
 
-const SECTIONS = [
-  {
-    label: 'menu.about',
-    section: NavigationTypes.Section.ABOUT,
-    position: NavigationTypes.Location.TOP,
-  },
-  {
-    label: 'menu.education',
-    section: NavigationTypes.Section.EDUCATION,
-    position: NavigationTypes.Location.RIGHT,
-  },
-  {
-    label: 'menu.skills',
-    section: NavigationTypes.Section.SKILLS,
-    position: NavigationTypes.Location.BOTTOM,
-  },
-  {
-    label: 'menu.work',
-    section: NavigationTypes.Section.WORK,
-    position: NavigationTypes.Location.LEFT,
-  },
-]
+const { sections: SECTIONS } = menuConfig
 
-type MenuProps = {
+type MenuDesktopProps = {
   section: NavigationTypes.Section | null
   onChange: (section: NavigationTypes.Section) => void
 }
 
-const Menu: FC<MenuProps> = ({ section, onChange }) => {
+const MenuDesktop: FC<MenuDesktopProps> = ({ section, onChange }) => {
   const { t } = useTranslation()
 
   const buttonsRef = useRef<HTMLDivElement>(null)
@@ -135,6 +115,7 @@ const Menu: FC<MenuProps> = ({ section, onChange }) => {
             id={`menu-button-${item.position}`}
             isActive={item.section === section}
             position={item.position}
+            backgroundColor={item.color}
             onClick={() => onChange(item.section)}
           >
             {t(item.label)}
@@ -145,4 +126,4 @@ const Menu: FC<MenuProps> = ({ section, onChange }) => {
   )
 }
 
-export default Menu
+export default MenuDesktop

@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import { ReactComponent as Close } from '@icons/close.svg'
 import classNames from 'classnames'
 
 import styles from './Burger.module.scss'
 
-const Burger = () => {
-  const [isOpen, setIsOpen] = React.useState(false)
+type BurgerProps = {
+  className?: string
+  isClose: boolean
+  onClick: () => void
+}
 
+const Burger: FC<BurgerProps> = ({ isClose, onClick, className }) => {
   return (
     <div
-      className={classNames(styles.burger, isOpen && styles.burgerClose)}
-      onClick={() => setIsOpen(!isOpen)}
+      className={classNames(styles.burger, isClose && styles.burgerClose, className)}
+      onClick={onClick}
     >
       <div className={classNames(styles.circle, styles.circleTopLeft)}></div>
       <div className={classNames(styles.circle, styles.circleTopRight)}></div>

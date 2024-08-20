@@ -9,11 +9,19 @@ type MenuButtonProps = {
   id: string
   isActive: boolean
   position: Navigation.Location
+  backgroundColor: string
   children: React.ReactNode
   onClick: () => void
 }
 
-const MenuButton: FC<MenuButtonProps> = ({ id, isActive, position, children, onClick }) => {
+const MenuButton: FC<MenuButtonProps> = ({
+  id,
+  isActive,
+  position,
+  backgroundColor,
+  children,
+  onClick,
+}) => {
   return (
     <div
       id={id}
@@ -27,7 +35,7 @@ const MenuButton: FC<MenuButtonProps> = ({ id, isActive, position, children, onC
       })}
     >
       <div className={styles.border} />
-      <div className={styles.background} />
+      <div className={styles.background} style={{ backgroundColor }} />
       <div className={styles.buttonText}>{children}</div>
     </div>
   )

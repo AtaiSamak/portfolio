@@ -13,40 +13,24 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    .background {
-      background-color: $color-orange;
-    }
   }
 
   &Right {
     top: 50%;
     right: 0;
     transform: translate(50%, -50%);
-
-    .background {
-      background-color: $color-blue;
-    }
   }
 
   &Bottom {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
-
-    .background {
-      background-color: $color-black;
-    }
   }
 
   &Left {
     top: 50%;
     left: 0;
     transform: translate(-50%, -50%);
-
-    .background {
-      background-color: $color-green;
-    }
   }
 
   .buttonText {

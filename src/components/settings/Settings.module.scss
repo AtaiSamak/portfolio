@@ -1,11 +1,7 @@
 @import '@styles/_variables';
 
 .settings {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
   pointer-events: auto;
-
   display: flex;
 
   .lang,

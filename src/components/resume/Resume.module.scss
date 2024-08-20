@@ -1,10 +1,7 @@
 @import '@styles/_variables';
 
 .resume {
-  position: absolute;
-  right: 25px;
-  top: 25px;
-  z-index: 2;
+  position: relative;
   pointer-events: auto;
 
   display: flex;

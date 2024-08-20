@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import { ReactComponent as Email } from '@icons/email.svg'
 import { ReactComponent as LinkedIn } from '@icons/linkedin.svg'
 import { ReactComponent as Telegram } from '@icons/telegram.svg'
+import classNames from 'classnames'
 
 import contactsConfig from '@components/contacts/Contacts.config'
 
 import styles from './Contacts.module.scss'
 
-const Contacts = () => {
+type ContactsProps = {
+  className?: string
+}
+
+const Contacts: FC<ContactsProps> = ({ className }) => {
   return (
-    <div className={styles.container}>
+    <div className={classNames(styles.container, className)}>
       <a href={contactsConfig.linkedIn} target="_blank" rel="noreferrer" className={styles.link}>
         <LinkedIn />
       </a>

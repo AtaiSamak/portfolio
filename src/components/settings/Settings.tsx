@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import { ReactComponent as Moon } from '@icons/moon.svg'
+import classNames from 'classnames'
 
 import styles from './Settings.module.scss'
 
-const Settings = () => {
+type SettingsProps = {
+  className?: string
+}
+
+const Settings: FC<SettingsProps> = ({ className }) => {
   return (
-    <div className={styles.settings}>
+    <div className={classNames(styles.settings, className)}>
       <div className={styles.theme}>
         <Moon />
       </div>

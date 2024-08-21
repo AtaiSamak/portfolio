@@ -23,17 +23,6 @@
     opacity: 0;
     animation: hide 0.8s;
   }
-
-  &Open {
-    &:after {
-      opacity: 1;
-      animation: show 0.8s;
-    }
-
-    .container {
-      pointer-events: auto;
-    }
-  }
 }
 
 .container {
@@ -49,25 +38,6 @@
 .contacts {
   margin: 4em auto 0;
   overflow: hidden;
-
-  & > a {
-    transform: translateY(-110%);
-    transition: transform 0.4s ease-in-out;
-
-    &:first-child {
-      transition: transform 0.3s ease-in-out;
-    }
-
-    &:last-child {
-      transition: transform 0.5s ease-in-out;
-    }
-  }
-
-  &Open {
-    & > a {
-      transform: translateY(0);
-    }
-  }
 }
 
 .header {
@@ -92,28 +62,4 @@
   max-width: 450px;
   padding: 0 25px;
   margin: 0 auto;
-}
-
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes hide {
-  0% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }

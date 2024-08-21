@@ -10,10 +10,6 @@
   line-height: 1.5;
 }
 
-.wrapper {
-  overflow: hidden;
-}
-
 .button {
   background: none;
   color: inherit;
@@ -25,9 +21,7 @@
 
   display: flex;
   align-items: center;
-
-  transform: translateY(-110%);
-  transition: transform 0.2s ease-in-out;
+  pointer-events: auto;
 
   span {
     content: '';
@@ -37,9 +31,5 @@
     background-color: red;
     margin-right: 0.25em;
     margin-bottom: -0.4em;
-  }
-
-  &Visible {
-    transform: translateY(0);
   }
 }

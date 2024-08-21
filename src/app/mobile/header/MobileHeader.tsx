@@ -9,14 +9,13 @@ import Settings from '@components/settings/Settings'
 import styles from './MobileHeader.module.scss'
 
 type MobileHeaderProps = {
-  isOpenMenuDelayed: boolean
   isOpenMenu: boolean
   onClickBurger: () => void
 }
 
-const MobileHeader: FC<MobileHeaderProps> = ({ isOpenMenu, isOpenMenuDelayed, onClickBurger }) => {
+const MobileHeader: FC<MobileHeaderProps> = ({ isOpenMenu, onClickBurger }) => {
   return (
-    <div className={classNames(styles.container, isOpenMenuDelayed && styles.containerOpen)}>
+    <div className={styles.container}>
       <Resume className={styles.resume} />
       <div className={styles.right}>
         <Settings className={styles.settings} />

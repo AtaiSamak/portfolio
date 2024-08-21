@@ -36,7 +36,8 @@ const AppMobile = () => {
     <>
       <div className={classNames(styles.menu, isMenuOpen && styles.menuOpen)}>
         <MobileHeader
-          isOpenMenu={isMenuOpenDelayed}
+          isOpenMenuDelayed={isMenuOpenDelayed}
+          isOpenMenu={isMenuOpen}
           onClickBurger={() => setIsMenuOpen(!isMenuOpen)}
         />
         <div className={styles.container}>

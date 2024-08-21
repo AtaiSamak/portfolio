@@ -1,4 +1,5 @@
 @import '@styles/_variables';
+@import '@fonts/karla/fontFace.scss';
 
 html {
   font-size: 20px;
@@ -11,7 +12,7 @@ html {
 body {
   margin: 0;
   font-family:
-    'Montserrat',
+    'Karla',
     system-ui,
     -apple-system,
     sans-serif;

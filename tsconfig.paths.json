@@ -7,6 +7,7 @@
       "@icons/*": ["./assets/icons/*"],
       "@styles/*": ["./assets/styles/*"],
       "@translations/*": ["./assets/i18n/*"],
+      "@fonts/*": ["./assets/fonts/*"],
       "@hooks/*": ["./hooks/*"],
       "@helpers/*": ["./helpers/*"],
       "@customTypes/*": ["./types/*"],

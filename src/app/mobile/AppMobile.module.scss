@@ -6,7 +6,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
 
   overflow: hidden;
   pointer-events: none;
@@ -21,7 +20,27 @@
     background-color: $color-white;
     z-index: -1;
     opacity: 0;
-    animation: hide 0.8s;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &Entering,
+  &Entered,
+  &Exiting {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &Exited {
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  &Entered {
+    .contacts > a {
+      transform: translateY(0);
+    }
   }
 }
 
@@ -38,6 +57,27 @@
 .contacts {
   margin: 4em auto 0;
   overflow: hidden;
+
+  & > a {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-110%);
+
+    &:first-child {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &:last-child {
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+}
+
+.section {
+  position: relative;
+  z-index: -1;
+  max-width: 450px;
+  padding: 0 25px 24px;
+  margin: 0 auto;
 }
 
 .header {
@@ -56,10 +96,4 @@
     width: 100%;
     background-color: $color-black;
   }
-}
-
-.section {
-  max-width: 450px;
-  padding: 0 25px;
-  margin: 0 auto;
 }

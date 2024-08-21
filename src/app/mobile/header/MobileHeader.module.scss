@@ -14,6 +14,36 @@
   overflow: hidden;
 }
 
+.resume {
+  transform: translateY(-110%);
+  transition: transform 0.2s ease-in-out;
+
+  &Entered {
+    transform: translateY(0);
+  }
+}
+
+.settings {
+  overflow: hidden;
+
+  & > div:first-child {
+    transform: translateY(-120%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  & > div:last-child {
+    transform: translateY(-130%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &Entered {
+    & > div:first-child,
+    & > div:last-child {
+      transform: translateY(0);
+    }
+  }
+}
+
 .right {
   display: flex;
 }

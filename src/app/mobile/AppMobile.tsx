@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Transition } from 'react-transition-group'
 
 import MobileHeader from '@app/mobile/header/MobileHeader'
 import NavigationTypes from '@customTypes/navigation'
@@ -16,6 +17,7 @@ import styles from './AppMobile.module.scss'
 
 const AppMobile = () => {
   const { t } = useTranslation()
+  const ref = useRef<HTMLDivElement>(null)
   const [section, setSection] = useState<NavigationTypes.Section | null>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -26,25 +28,41 @@ const AppMobile = () => {
 
   return (
     <>
-      <MobileHeader isOpenMenu={isMenuOpen} onClickBurger={() => setIsMenuOpen(!isMenuOpen)} />
-      {isMenuOpen ? (
-        <div className={classNames(styles.menu)}>
-          <div className={styles.container}>
-            <MenuMobile onChange={handleChangeSection} />
-            <Contacts className={classNames(styles.contacts)} />
+      <Transition nodeRef={ref} in={isMenuOpen} timeout={500}>
+        {(state) => (
+          <div ref={ref}>
+            <MobileHeader
+              transitionStatus={state}
+              isOpenMenu={isMenuOpen}
+              onClickBurger={() => setIsMenuOpen(!isMenuOpen)}
+            />
+            <div
+              className={classNames(styles.menu, {
+                [styles.menuEntering]: state === 'entering',
+                [styles.menuEntered]: state === 'entered',
+                [styles.menuExiting]: state === 'exiting',
+                [styles.menuExited]: state === 'exited',
+              })}
+            >
+              <div className={styles.container}>
+                <MenuMobile transitionStatus={state} onChange={handleChangeSection} />
+                <Contacts className={classNames(styles.contacts)} />
+              </div>
+            </div>
+            {state !== 'entered' ? (
+              <div className={styles.section}>
+                <div className={styles.header}>
+                  {t(`menu.${section || NavigationTypes.Section.ABOUT}`)}
+                </div>
+                {(section === NavigationTypes.Section.ABOUT || section === null) && <About />}
+                {section === NavigationTypes.Section.EDUCATION && <Education />}
+                {section === NavigationTypes.Section.SKILLS && <Skills />}
+                {section === NavigationTypes.Section.WORK && <Work />}
+              </div>
+            ) : null}
           </div>
-        </div>
-      ) : (
-        <div className={styles.section}>
-          <div className={styles.header}>
-            {t(`menu.${section || NavigationTypes.Section.ABOUT}`)}
-          </div>
-          {(section === NavigationTypes.Section.ABOUT || section === null) && <About />}
-          {section === NavigationTypes.Section.EDUCATION && <Education />}
-          {section === NavigationTypes.Section.SKILLS && <Skills />}
-          {section === NavigationTypes.Section.WORK && <Work />}
-        </div>
-      )}
+        )}
+      </Transition>
     </>
   )
 }

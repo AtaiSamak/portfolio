@@ -58,7 +58,7 @@
     border: 10px solid $color-gray;
     transform: translate(-50%, -50%) scale(0.5);
     transition: transform 0.3s ease-in-out;
-    background: $color-white;
+    background: var(--color-bg);
   }
 
   .background {

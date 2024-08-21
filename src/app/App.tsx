@@ -10,7 +10,7 @@ import './App.scss'
 const App = () => {
   const isMobile = useIsMobile()
 
-  return isMobile ? <AppMobile /> : <AppDesktop />
+  return <div className={'theme--dark'}>{isMobile ? <AppMobile /> : <AppDesktop />}</div>
 }
 
 export default App

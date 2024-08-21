@@ -1,0 +1,11 @@
+@import './_variables';
+
+html[data-theme='light'] {
+  --color-bg: #{$color-white};
+  --color-text: #{$color-black};
+}
+
+html[data-theme='dark'] {
+  --color-bg: #{$color-black-theme-black};
+  --color-text: #{$color-black-theme-white};
+}

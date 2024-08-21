@@ -17,7 +17,7 @@
     top: calc(100% + 2px);
     left: 1%;
     height: 2px;
-    background-color: $color-black;
+    background-color: var(--color-text);
     width: 0;
     transition: width 0.3s ease-in-out;
   }
@@ -34,5 +34,7 @@
     width: 1.125rem;
     height: 1.125rem;
     margin-left: 0.25em;
+    fill: none;
+    stroke: var(--color-text);
   }
 }

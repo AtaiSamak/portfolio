@@ -12,6 +12,7 @@
 
     width: 2rem;
     height: 2rem;
+    color: var(--color-text);
 
     cursor: pointer;
     opacity: 0.9;
@@ -23,10 +24,41 @@
       opacity: 1;
       transform: scale(1.25);
     }
+  }
+
+  .themeWrapper {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    overflow: hidden;
 
     svg {
-      height: 50%;
-      width: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: var(--color-text);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .moon {
+      width: 80%;
+      height: 80%;
+    }
+
+    .sun {
+      height: 100%;
+      width: 100%;
+      transform: translate(-50%, 200%);
+    }
+
+    &Dark {
+      .moon {
+        transform: translate(-50%, -200%);
+      }
+      .sun {
+        transform: translate(-50%, -50%);
+      }
     }
   }
 

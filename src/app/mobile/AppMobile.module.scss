@@ -1,4 +1,5 @@
 @import '@styles/variables';
+@import '@styles/themes';
 
 .menu {
   position: fixed;
@@ -17,7 +18,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: $color-white;
+    background-color: var(--color-bg);
     z-index: -1;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
@@ -105,6 +106,6 @@
     left: 0;
     height: 2px;
     width: 100%;
-    background-color: $color-black;
+    background-color: var(--color-text);
   }
 }

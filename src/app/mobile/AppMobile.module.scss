@@ -74,10 +74,15 @@
 
 .section {
   position: relative;
-  z-index: -1;
   max-width: 450px;
   padding: 0 25px 24px;
   margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  &Entered {
+    opacity: 1;
+  }
 }
 
 .header {

@@ -50,7 +50,9 @@ const AppMobile = () => {
               </div>
             </div>
             {state !== 'entered' ? (
-              <div className={styles.section}>
+              <div
+                className={classNames(styles.section, state === 'exited' && styles.sectionEntered)}
+              >
                 <div className={styles.header}>
                   {t(`menu.${section || NavigationTypes.Section.ABOUT}`)}
                 </div>

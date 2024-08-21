@@ -19,7 +19,12 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  pointer-events: auto;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
 
   svg {
     transform: rotate(90deg);
@@ -45,6 +50,12 @@
     &:after {
       width: 95%;
     }
+  }
+
+  &Visible {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

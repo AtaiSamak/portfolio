@@ -9,6 +9,7 @@ import styles from './Work.module.scss'
 
 const Work = () => {
   const { t } = useTranslation()
+
   return (
     <>
       {workConfig.map((item, index) => (

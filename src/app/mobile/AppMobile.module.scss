@@ -74,14 +74,20 @@
 
 .section {
   position: relative;
+
   max-width: 450px;
   padding: 0 25px 24px;
   margin: 0 auto;
+
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
 
   &Entered {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 

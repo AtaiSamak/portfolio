@@ -1,0 +1,18 @@
+.section {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: calc(100% - 50px);
+  padding: 75px 150px 75px 475px;
+  pointer-events: auto;
+
+  @media (max-width: 1440px) {
+    max-width: 1200px;
+    padding-left: 375px;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 984px;
+    padding-left: 325px;
+    padding-right: 125px;
+  }
+}

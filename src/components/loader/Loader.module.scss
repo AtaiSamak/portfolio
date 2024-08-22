@@ -1,0 +1,59 @@
+@import '@styles/variables';
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.containerHide .loader {
+  transform: translateY(-125%);
+}
+
+.containerHide .text {
+  transform: translateY(-110%);
+}
+
+.text {
+  transition: transform 0.4s ease-in-out;
+}
+
+.textWrapper {
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.loaderWrapper {
+  overflow: hidden;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  --_g: no-repeat radial-gradient(farthest-side, #{$color-black} 94%, #0000);
+  background:
+    var(--_g) 0 0,
+    var(--_g) 100% 0,
+    var(--_g) 100% 100%,
+    var(--_g) 0 100%;
+  background-size: 40% 40%;
+  animation: l38 0.5s infinite;
+  transition: transform 0.2s ease-in-out;
+}
+
+@keyframes l38 {
+  100% {
+    background-position:
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0;
+  }
+}

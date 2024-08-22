@@ -6,38 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="Portfolio"
+      content="Web developer portfolio"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <title>Atai</title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <style>
+      html {
+          font-size: 20px;
+      }
+
+      html[data-theme='light'] {
+          --color-bg: #ffffff;
+          --color-text: #252323;
+      }
+
+      html[data-theme='dark'] {
+          --color-bg: #393e46;
+          --color-text: #eeeeee;
+      }
+
+      body {
+          margin: 0;
+          font-family:
+            'Moderustic',
+            system-ui,
+            -apple-system,
+            sans-serif;
+
+          font-size: 1rem;
+          line-height: 1.25;
+          font-weight: 400;
+          font-style: normal;
+          background-color: var(--color-bg);
+          color: var(--color-text);
+          transition: background-color 0.2s ease-in-out;
+      }
+
+      body:after {
+          content: '';
+          position: fixed;
+          top: -300%;
+          left: -150%;
+          height: 600%;
+          width: 600%;
+          z-index: 999;
+          pointer-events: none;
+
+          background-image: url('./noise.png');
+          background-size: 200px;
+          background-repeat: repeat;
+          opacity: 0.2;
+
+          animation: grain 7s steps(10) infinite;
+      }
+
+      @media (max-width: 1440px) {
+          html {
+              font-size: 18px;
+          }
+      }
+
+      @keyframes grain {
+          0%,
+          to {
+              transform: translate(0);
+          }
+
+          10% {
+              transform: translate(-5%, -10%);
+          }
+
+          20% {
+              transform: translate(-15%, 5%);
+          }
+
+          30% {
+              transform: translate(7%, -25%);
+          }
+
+          40% {
+              transform: translate(-5%, 25%);
+          }
+
+          50% {
+              transform: translate(-15%, 10%);
+          }
+
+          60% {
+              transform: translate(15%);
+          }
+
+          70% {
+              transform: translateY(15%);
+          }
+
+          80% {
+              transform: translate(3%, 35%);
+          }
+
+          90% {
+              transform: translate(-10%, 10%);
+          }
+      }
+    </style>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

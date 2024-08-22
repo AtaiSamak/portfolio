@@ -5,6 +5,12 @@
 html {
   font-size: 20px;
 
+  &[data-theme='dark'] {
+    body {
+      background-color: $color-black-theme-black;
+    }
+  }
+
   @media (max-width: 1440px) {
     font-size: 18px;
   }
@@ -21,8 +27,9 @@ body {
   line-height: $line-height-md;
   font-weight: 400;
   font-style: normal;
-  background-color: var(--color-bg);
+  background-color: $color-white;
   color: var(--color-text);
+  transition: background-color 0.2s ease-in-out;
 
   &::after {
     content: '';

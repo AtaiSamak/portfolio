@@ -29,7 +29,7 @@ const Settings: FC<SettingsProps> = ({ className }) => {
   }, [theme])
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-lang', lang)
+    document.documentElement.setAttribute('lang', lang)
   }, [lang])
 
   const onChangeTheme = () => {

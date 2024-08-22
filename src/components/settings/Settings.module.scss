@@ -24,6 +24,12 @@
       opacity: 1;
       transform: scale(1.25);
     }
+
+    @media (max-width: 768px) {
+      &:hover {
+        transform: scale(1);
+      }
+    }
   }
 
   .themeWrapper {

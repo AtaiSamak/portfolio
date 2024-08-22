@@ -1,8 +1,11 @@
 import React, { FC, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { ReactComponent as Moon } from '@icons/moon.svg'
 import { ReactComponent as Sun } from '@icons/sun.svg'
 import classNames from 'classnames'
+
+import SettingsHelpers from '@components/settings/Settings.helpers'
 
 import styles from './Settings.module.scss'
 
@@ -16,7 +19,18 @@ type SettingsProps = {
 }
 
 const Settings: FC<SettingsProps> = ({ className }) => {
+  const { i18n } = useTranslation()
   const [theme, setTheme] = useState(localStorage.getItem('theme') || themes.LIGHT)
+
+  const lang = SettingsHelpers.getLanguage()
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-lang', lang)
+  }, [lang])
 
   const onChangeTheme = () => {
     const newTheme = theme === themes.LIGHT ? themes.DARK : themes.LIGHT
@@ -24,10 +38,10 @@ const Settings: FC<SettingsProps> = ({ className }) => {
     setTheme(newTheme)
   }
 
-  useEffect(() => {
-    console.log('hi')
-    document.documentElement.setAttribute('data-theme', theme)
-  }, [theme])
+  const onChangeLang = () => {
+    const newLang = lang === 'en' ? 'ru' : 'en'
+    i18n.changeLanguage(newLang)
+  }
 
   return (
     <div className={classNames(styles.settings, className)}>
@@ -42,7 +56,9 @@ const Settings: FC<SettingsProps> = ({ className }) => {
           <Sun className={styles.sun} />
         </div>
       </div>
-      <div className={styles.lang}>RU</div>
+      <div onClick={onChangeLang} className={styles.lang}>
+        {lang === 'en' ? 'RU' : 'EN'}
+      </div>
     </div>
   )
 }

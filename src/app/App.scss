@@ -1,6 +1,6 @@
 @import '@styles/variables';
 @import '@styles/themes';
-@import '@fonts/karla/fontFace.scss';
+@import '@fonts/fontFace';
 
 html {
   font-size: 20px;
@@ -19,7 +19,7 @@ html {
 body {
   margin: 0;
   font-family:
-    'Karla',
+    'Moderustic',
     system-ui,
     -apple-system,
     sans-serif;

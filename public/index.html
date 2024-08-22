@@ -11,9 +11,44 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="preload" href="assets/fonts/moderustic/Moderustic-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
+    <link rel="preload" href="assets/fonts/moderustic/Moderustic-Medium.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
+    <link rel="preload" href="assets/fonts/moderustic/Moderustic-SemiBold.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
+    <link rel="preload" href="assets/fonts/moderustic/Moderustic-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous">
+
     <title>Atai</title>
 
     <style>
+      @font-face {
+          font-family: 'Moderustic';
+          src: url('assets/fonts/moderustic/Moderustic-Regular.woff2') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'Moderustic';
+          src: url('assets/fonts/moderustic/Moderustic-Medium.woff2') format('truetype');
+          font-weight: 500;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'Moderustic';
+          src: url('assets/fonts/moderustic/Moderustic-SemiBold.woff2') format('truetype');
+          font-weight: 600;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'Moderustic';
+          src: url('assets/fonts/moderustic/Moderustic-Bold.woff2') format('truetype');
+          font-weight: 700;
+          font-style: normal;
+      }
+
+
       html {
           font-size: 20px;
       }
@@ -112,8 +147,90 @@
           }
       }
     </style>
+
+    <style id="loader-styles">
+      #loader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 99;
+          background-color: var(--color-bg);
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          transition: opacity 0.2s ease-in-out;
+      }
+
+      #loader.show .loader, #loader.show .text {
+          transform: translateY(0);
+      }
+
+      #loader.hide {
+          opacity: 0;
+      }
+
+      #loader .textWrapper {
+          margin-top: 40px;
+          overflow: hidden;
+      }
+
+      #loader .text {
+          transition: transform 0.6s ease-in-out;
+          transform: translateY(-110%);
+      }
+
+      #loader .loaderWrapper {
+          overflow: hidden;
+      }
+
+      #loader .loader {
+          width: 60px;
+          aspect-ratio: 1;
+          --_g: no-repeat radial-gradient(farthest-side, var(--color-text) 94%, #0000);
+          background:
+                  var(--_g) 0 0,
+                  var(--_g) 100% 0,
+                  var(--_g) 100% 100%,
+                  var(--_g) 0 100%;
+          background-size: 40% 40%;
+          animation: l38 0.5s infinite;
+          transition: transform 0.4s ease-in-out;
+          transform: translateY(-125%);
+      }
+
+      @keyframes l38 {
+          100% {
+              background-position:
+                      100% 0,
+                      100% 100%,
+                      0 100%,
+                      0 0;
+          }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <div id="loader">
+      <div class="loaderWrapper">
+        <div class="loader"></div>
+      </div>
+      <div class="textWrapper">
+        <div class="text">Page is loading...</div>
+      </div>
+    </div>
+
+    <script id="loader-script" type="text/javascript">
+      window.addEventListener('load', function() {
+        setTimeout(() => {
+          document.getElementById("loader").classList.add("show")
+        }, 0)
+      });
+    </script>
   </body>
 </html>

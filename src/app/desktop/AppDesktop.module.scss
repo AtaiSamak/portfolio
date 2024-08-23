@@ -46,18 +46,18 @@
     transition: width 0.3s ease-in-out;
   }
 
-  &:hover {
-    opacity: 1;
-
-    &:after {
-      width: 95%;
-    }
-  }
-
   &Visible {
     pointer-events: auto;
     opacity: 1;
     transform: translateY(0);
+
+    &:hover {
+      opacity: 1;
+
+      &:after {
+        width: 95%;
+      }
+    }
   }
 }
 

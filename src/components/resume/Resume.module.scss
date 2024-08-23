@@ -11,6 +11,9 @@
   opacity: 0.9;
   cursor: pointer;
 
+  color: inherit;
+  text-decoration: inherit;
+
   &:after {
     content: '';
     position: absolute;

@@ -1,11 +1,10 @@
 import React, { FC, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import LangHelpers from '@helpers/lang'
 import { ReactComponent as Moon } from '@icons/moon.svg'
 import { ReactComponent as Sun } from '@icons/sun.svg'
 import classNames from 'classnames'
-
-import SettingsHelpers from '@components/settings/Settings.helpers'
 
 import styles from './Settings.module.scss'
 
@@ -22,7 +21,7 @@ const Settings: FC<SettingsProps> = ({ className }) => {
   const { i18n } = useTranslation()
   const [theme, setTheme] = useState(localStorage.getItem('theme') || themes.LIGHT)
 
-  const lang = SettingsHelpers.getLanguage()
+  const lang = LangHelpers.getLanguage()
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)

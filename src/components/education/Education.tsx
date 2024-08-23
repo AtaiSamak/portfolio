@@ -13,10 +13,10 @@ const Education = () => {
       {educationConfig.map((item, index) => (
         <div key={index} className={styles.container}>
           <div className={styles.header}>
+            <div className={styles.date}>{item.date.getFullYear()}</div>
             <div className={styles.name}>
               {t(item.field)}, {t(item.name)}
             </div>
-            <div className={styles.date}>{item.date.getFullYear()}</div>
           </div>
           <p className={styles.description}>{t(item.description)}</p>
         </div>

@@ -2,33 +2,33 @@
 
 .work {
   & + & {
-    margin-top: 1em;
+    margin-top: 2em;
   }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.25em;
+  align-items: center;
+  margin-bottom: 0.5em;
 
   @media (max-width: 1024px) {
     flex-direction: column;
+    align-items: flex-start;
+
+    .date {
+      margin-bottom: 0.5em;
+    }
   }
 }
 
-.date {
-  font-weight: 500;
-  opacity: 0.8;
-  font-size: $font-size-sm;
-}
-
 .name {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: $font-size-lg;
 }
 
 .projectName {
-  margin: 0.25em 0 0.2em;
-  font-weight: 500;
+  margin-top: 0.5em;
   a {
     color: #3795bd;
   }

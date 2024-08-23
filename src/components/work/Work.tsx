@@ -15,12 +15,12 @@ const Work = () => {
       {workConfig.map((item, index) => (
         <div className={styles.work} key={index}>
           <div className={styles.header}>
-            <div className={styles.name}>
-              {t(item.companyName)} | {t(item.companyLocation)}
-            </div>
             <div className={styles.date}>
               {DateHelpers.formatDate(item.startDate)} -{' '}
               {item.finishDate ? DateHelpers.formatDate(item.finishDate) : t('label.present')}
+            </div>
+            <div className={styles.name}>
+              {t(item.companyName)} | {t(item.companyLocation)}
             </div>
           </div>
 

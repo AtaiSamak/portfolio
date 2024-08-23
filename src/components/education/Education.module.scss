@@ -2,31 +2,26 @@
 
 .container {
   & + & {
-    margin-top: 1em;
+    margin-top: 2em;
   }
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.name,
-.date {
-  font-weight: 500;
+.name {
+  font-weight: 600;
+  font-size: $font-size-lg;
 }
 
 .date {
-  opacity: 0.8;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
+  margin-bottom: 0.5em;
 }
 
 .description {
-  margin-top: 0.25em;
+  margin-top: 0.5em;
 }

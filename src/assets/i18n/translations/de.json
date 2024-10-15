@@ -1,0 +1,42 @@
+{
+  "author.firstName": "Atai",
+  "author.lastName": "Samakov",
+  "author.fullName": "Atai Samakov",
+  "author.specialization": "Frontend-Entwickler",
+
+  "menu.about": "Über mich",
+  "menu.work": "Arbeit",
+  "menu.education": "Bildung",
+  "menu.skills": "Fähigkeiten",
+
+  "label.resume": "Lebenslauf",
+  "label.present": "JETZT",
+  "label.project": "Projekt",
+  "label.menu": "Menü",
+
+  "about.description": "<0>Hallo, ich bin Atai, ein leidenschaftlicher Frontend-Entwickler mit einem ausgeprägten Auge für Details und einer soliden Basis in JavaScript, React und modernen Webtechnologien.</0><0>Mit einem tiefen Verständnis von HTML, CSS, JavaScript (ES6+), TypeScript und Frameworks wie React und Redux spezialisiere ich mich auf den Aufbau intuitiver und responsiver Webanwendungen.</0><0>Mein Ziel ist es, mich als Entwickler weiterzuentwickeln und schließlich eine führende Rolle als Senior-Frontend-Entwickler zu übernehmen, in der ich Projekte leiten und andere betreuen kann.</0><0>Ich habe einen Bachelor-Abschluss in Informationssystemen und Technologien von der KNITU-KAI und habe fortgeschrittene Programmierkurse an der 'School 21' von Sberbank besucht.</0><0>Ich lege großen Wert auf sauberen, wartbaren Code und glaube an die Bedeutung kontinuierlichen Lernens. Bücher wie 'Clean Code' von Robert Martin und 'Effective TypeScript' von Dan Vanderkam haben meine Entwicklungsphilosophie stark beeinflusst.</0><0>Zögern Sie nicht, mich zu kontaktieren, wenn Sie an einer Zusammenarbeit interessiert sind, über Jobmöglichkeiten sprechen möchten oder einfach nur über die neuesten Entwicklungen im Frontend-Bereich plaudern wollen!</0>",
+
+  "education.knitu.name": "KNITU-KAI",
+  "education.knitu.field": "Informationssysteme und Technologien",
+  "education.knitu.description": "Ich habe einen Bachelor-Abschluss erhalten und während meines Studiums die Grundlagen der Datenbankverwaltung, objektorientierten Programmierung in C#, Programmiersprachen C/C++, Algorithmen, Datenstrukturen (Stacks, Warteschlangen, Listen, Arrays usw.) und vieles mehr gelernt.",
+
+  "education.school21.name": "School 21",
+  "education.school21.field": "Programmierkurse",
+  "education.school21.description": "Ich habe die Programmiersprachen C/C++ studiert und kleine Projekte entwickelt, wobei ich neue Kenntnisse über Programmiergrundlagen (Threads, Semaphoren, Mutexe, Sockets usw.) erworben habe. In diesem Kurs habe ich praktische Programmierfähigkeiten erworben.",
+
+  "work.myack.name": "Myack",
+  "work.myack.location": "New York, Vereinigte Staaten",
+  "work.myack.ziphy.name": "Ziphy",
+  "work.myack.ziphy.description": "<0>1. Von Grund auf ein mehrstufiges Formular mit Datenvalidierung und PDF-Erstellung entwickelt;</0><0>2. Ein Buchungssystem für Termine implementiert, um die Planungseffizienz zu verbessern.</0>",
+  "work.myack.labq.name": "LabQ",
+  "work.myack.labq.description": "<0>1. Interaktive Diagramme zur Visualisierung von Patientendaten erstellt;</0><0>2. Eine filterbare menschliche Körperkarte zur Darstellung von Krankheiten der Patienten entwickelt.</0>",
+
+  "work.welbex.name": "Welbex",
+  "work.welbex.location": "Moskau, Russland",
+  "work.welbex.amocrm.name": "AmoCRM",
+  "work.welbex.amocrm.description": "<0>1. Benutzerdefinierte Integrationen für das CRM-System (AmoCRM) entwickelt und gewartet;</0><0>2. Veraltete JavaScript-Anwendungen erfolgreich auf React migriert, um die Wartbarkeit und Leistung zu verbessern;</0><0>3. Während des gesamten Softwareentwicklungszyklus mit Designern, Back-End-Entwicklern, QA-Testern und Projektmanagern zusammengearbeitet.</0>",
+
+  "work.proxyone.name": "Proxyone",
+  "work.proxyone.location": "Posen, Polen",
+  "work.proxyone.description": "<0>1. Responsive und SEO-optimierte E-Commerce-Websites, Landingpages und Admin-Panels entwickelt;</0><0>2. Leistungsoptimierungen zur Verbesserung der Ladegeschwindigkeit implementiert.</0>"
+}

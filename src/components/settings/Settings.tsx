@@ -38,7 +38,7 @@ const Settings: FC<SettingsProps> = ({ className }) => {
   }
 
   const onChangeLang = () => {
-    const newLang = lang === 'en' ? 'ru' : 'en'
+    const newLang = lang === 'en' ? 'de' : lang === 'de' ? 'ru' : 'en'
     i18n.changeLanguage(newLang)
   }
 
@@ -56,7 +56,7 @@ const Settings: FC<SettingsProps> = ({ className }) => {
         </div>
       </div>
       <div onClick={onChangeLang} className={styles.lang}>
-        {lang === 'en' ? 'RU' : 'EN'}
+        {lang === 'en' ? 'DE' : lang === 'de' ? 'RU' : 'EN'}
       </div>
     </div>
   )

@@ -6,12 +6,14 @@ import { ReactComponent as Download } from '@icons/download.svg'
 import classNames from 'classnames'
 
 import styles from './Resume.module.scss'
+import resumeDE from './files/resume_de.pdf'
 import resumeEN from './files/resume_en.pdf'
 import resumeRU from './files/resume_ru.pdf'
 
 const resume = {
   ru: resumeRU,
   en: resumeEN,
+  de: resumeDE,
 }
 
 type ResumeProps = {
@@ -26,7 +28,7 @@ const Resume: FC<ResumeProps> = ({ className }) => {
   return (
     <a
       href={resume[lang]}
-      download={lang === 'en' ? 'Resume' : 'Резюме'}
+      download={lang === 'en' ? 'Resume' : lang === 'de' ? 'Lebenslauf' : 'Резюме'}
       target={'_blank'}
       className={classNames(styles.resume, className)}
       rel="noreferrer"

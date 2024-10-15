@@ -38,7 +38,7 @@ const workConfig: {
     descriptions: [
       {
         name: 'work.welbex.amocrm.name',
-        link: 'https://labq.com/',
+        link: 'https://www.amocrm.ru/',
         description: 'work.welbex.amocrm.description',
       },
     ],

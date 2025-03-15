@@ -1,5 +1,5 @@
 const contactsConfig = {
-  linkedIn: 'https://www.linkedin.com/in/atai-samakov-b798a42a4/',
+  linkedIn: 'https://www.linkedin.com/in/ataisamak/',
   telegram: 'https://t.me/ataisamak',
   email: 'ataisamak@gmail.com',
 }

@@ -10,7 +10,7 @@
   "menu.skills": "Skills",
 
   "label.resume": "Resume",
-  "label.present": "PRESENT",
+  "label.present": "Present",
   "label.project": "Project",
   "label.menu": "Menu",
 
@@ -18,25 +18,25 @@
 
   "education.knitu.name": "KNITU-KAI",
   "education.knitu.field": "Information Systems and Technologies",
-  "education.knitu.description": "I received a bachelor's degree and during my studies, I learned the basics of database management, object-oriented programming in C#, programming languages C/C++, algorithms, data structures (stacks, queues, lists, arrays, etc.), and much more.",
+  "education.knitu.description": "Gained a strong foundation in database management, object-oriented programming (C#), and system programming (C/C++). Studied algorithms and data structures (stacks, queues, linked lists, arrays), applying them to real-world problems.",
 
   "education.school21.name": "School 21",
   "education.school21.field": "Programming courses",
-  "education.school21.description": "I studied C/C++ programming languages. I developed small projects, gaining new knowledge about programming fundamentals (threads, semaphores, mutexes, sockets, etc.). In this course, I gained real practical programming skills.",
+  "education.school21.description": "Studied C/C++ programming with a focus on multithreading, synchronization (threads, semaphores, mutexes), and network programming (sockets). Developed small projects, applying core computer science principles and enhancing problem-solving skills.",
 
   "work.myack.name": "Myack",
   "work.myack.location": "New York United States",
   "work.myack.ziphy.name": "Ziphy",
-  "work.myack.ziphy.description": "<0>1. Developed from scratch multi-step form with data validation and PDF generation capabilities;</0><0>2. Implemented an appointment booking system, improving scheduling efficiency.</0>",
+  "work.myack.ziphy.description": "<0>• Developed a multi-step online form with real-time data validation, pagination, and PDF generation, streamlining user interactions.</0><0>• Implemented a multi-stage patient booking system, allowing users to seamlessly switch stages and save data, improving eﬃciency by 40%.</0><0>• Integrated Google Maps to dynamically display the nearest hospitals, enhancing accessibility for users.</0>",
   "work.myack.labq.name": "LabQ",
-  "work.myack.labq.description": "<0>1. Built interactive graphs for visualizing patient medical data;</0><0>2. Created a filterable human body map to display patients' diseases.</0>",
+  "work.myack.labq.description": "<0>• Designed interactive charts to visualize patient medical data, enhancing clarity and decision-making for doctors.</0><0>• Built an interactive body map to visualize medical conditions and health indicators with greater clarity.</0>",
 
   "work.welbex.name": "Welbex",
   "work.welbex.location": "Moscow Russia",
   "work.welbex.amocrm.name": "AmoCRM",
-  "work.welbex.amocrm.description": "<0>1. Developed and maintained custom integrations for the CRM system(AmoCRM);</0><0>2. Successfully migrated legacy JavaScript applications to React improving maintainability and performance;</0><0>3. Collaborated with designers, back-end engineers, QA testers, and project managers throughout the full software development lifecycle.</0>",
+  "work.welbex.amocrm.description": "<0>• Developed and integrated 10+ custom features into AmoCRM, including Google Drive, Yandex Disk, and third-party services, streamlining workflows and boosting business eﬃciency.</0><0>• Migrated legacy JavaScript components to React, improving maintainability and reducing future development time by 30%.</0><0>• Collaborated with backend engineers, testers, designers, and product managers to align technical solutions with business goals.</0>",
 
   "work.proxyone.name": "Proxyone",
   "work.proxyone.location": "Poznan Poland",
-  "work.proxyone.description": "<0>1. Developed responsive and SEO-optimized e-commerce websites, landing pages, and admin panels;</0><0>2. Implemented performance optimizations to enhance page load speed.</0>"
+  "work.proxyone.description": "<0>• Developed responsive, SEO-optimized websites and admin dashboards, improving site accessibility and UX.</0><0>• Enhanced website performance, increasing PageSpeed score from 69% to 100%.</0><0>• Managed project deadlines, improving task planning and execution.</0>"
 }

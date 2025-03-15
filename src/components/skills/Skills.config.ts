@@ -16,22 +16,43 @@ const skillBars = [
   },
   {
     name: 'TypeScript',
-    value: 90,
+    value: 100,
     color: '#3795BD',
   },
   {
     name: 'MobX',
-    value: 80,
+    value: 100,
     color: '#FFAD60',
   },
   {
     name: 'Redux Toolkit Query',
-    value: 70,
+    value: 100,
     color: '#9b59b6',
   },
 ]
 
-const skillBoxes = ['Git', 'Rest API', 'Webpack', 'npm', 'Firebase', 'Atlassian Jira', 'Agile']
+const skillBoxes = [
+  'Next.js',
+  'NestJS',
+  'Node.js',
+  'Express.js',
+  'PostgreSQL',
+  'Git',
+  'GitHub Actions',
+  'CI/CD',
+  'Docker',
+  'AWS',
+  'Firebase',
+  'npm/yarn',
+  'Rest API',
+  'WebSocket',
+  'Webpack',
+  'React Testing Library',
+  'Jest',
+  'Cypress',
+  'Atlassian Jira',
+  'Agile',
+]
 
 const skillsConfig = {
   bars: skillBars,
